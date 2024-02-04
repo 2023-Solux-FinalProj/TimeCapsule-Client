@@ -10,8 +10,8 @@ const SendCapsule = () => {
   useEffect(() => {
     // 3초 후 메인페이지로 이동
     setTimeout(() => {
-      navigate('/');
-    }, 4000);
+      navigate('/home');
+    }, 7000);
   }, []);
 
   return (
