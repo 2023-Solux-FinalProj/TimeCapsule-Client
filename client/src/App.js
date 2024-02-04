@@ -11,6 +11,7 @@ import CapsuleList from './pages/CapsuleList';
 import CapsuleDetail from './pages/CapsuleDetail';
 import ThemeList from './pages/ThemeList';
 import Three from './pages/Three';
+import SendCapsule from './pages/SendCapsule';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/capsuledetail" element={<CapsuleDetail />} />
         <Route path="/create" element={<ThemeList />} />
         <Route path="/three" element={<Three />} />
+        <Route path="/send/sendcapsule" element={<SendCapsule />} />
       </Routes>
     </div>
   );

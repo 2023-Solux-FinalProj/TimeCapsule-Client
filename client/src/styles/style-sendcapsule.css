@@ -1,0 +1,76 @@
+.sendcapsule {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.capsule-image {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 40px 40px;
+
+  animation: fadeOutAnimation 1s 2s ease forwards; /* 애니메이션 추가 */
+}
+
+.capsule-top {
+  animation: downAnimation 1.7s ease forwards; /* 애니메이션 추가 */
+}
+
+.capsule-bottom {
+  margin-top: -162px;
+}
+
+.sendcapsule p.complete-text {
+  position: absolute;
+  color: #fff;
+  font-family: Helvetica;
+  font-size: 32px;
+  width: 100%;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* 0.5초 동안 애니메이션, 2.7초 후 실행 */
+  animation: fadeInAnimation 0.5s 2.7s ease forwards;
+  opacity: 0;
+}
+
+@keyframes downAnimation {
+  from {
+    transform: translateY(-80px);
+  }
+  to {
+    transform: translateY(0); /* translateY 값을 조절하여 이동 거리 조절 가능 */
+  }
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
