@@ -15,8 +15,9 @@
   justify-content: center;
   position: relative;
   padding: 40px 40px;
+  animation: fadeOutAnimation 1s 2.5s ease forwards;
 
-  animation: fadeOutAnimation 1s 2s ease forwards; /* 애니메이션 추가 */
+  /*animation: fadeOutAnimation 1s 2s ease forwards; /* 애니메이션 추가 */
 }
 
 .capsule-top {
@@ -38,13 +39,13 @@
   font-weight: 700;
   line-height: normal;
   z-index: 1;
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   /* 0.5초 동안 애니메이션, 2.7초 후 실행 */
-  animation: fadeInAnimation 0.5s 2.7s ease forwards;
+  animation: fadeInTextAnimation 0.5s 3.5s ease forwards;
+  /*2.7s ease forwards;*/
   opacity: 0;
 }
 
@@ -57,20 +58,32 @@
   }
 }
 
-@keyframes fadeOutAnimation {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
 @keyframes fadeInAnimation {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fadeInTextAnimation {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%); /* 위쪽 중앙에서 시작하도록 수정 */
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
